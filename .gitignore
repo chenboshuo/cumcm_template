@@ -1,0 +1,21 @@
+# latex
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+**/*.log
+*.gz
+*.toc
+*.out
+*.xdv
+
+
+# jupyter notebook
+.ipynb_checkpoints
+
+# vocode
+.vscode
+
+# sections pdf
+**/sections/*.pdf
