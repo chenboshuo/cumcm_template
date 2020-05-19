@@ -1,0 +1,74 @@
+% !Mode:: "TeX:UTF-8"
+% !BIB program = bibtex
+% !TEX program = xelatex
+
+% \documentclass{cumcmthesis}
+\documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
+
+  \title{}
+  \tihao{}
+  \baominghao{}
+  \schoolname{}
+  \membera{}
+  \memberb{}
+  \memberc{}
+  \supervisor{}
+  \yearinput{2020}
+  \monthinput{9}
+  \dayinput{13}
+
+\usepackage{subfiles}  % Best loaded last in the preamble
+\begin{document}
+
+\maketitle
+
+\subfile{sections/abstract}
+
+\section{问题重述}
+  \subfile{sections/question_review}
+
+
+\section{问题的分析}
+  \subfile{sections/analyse}
+\section{模型的假设}
+  \subfile{sections/assumptions}
+\section{符号说明}
+  \subfile{sections/notations}
+\section{模型的建立与求解}
+
+\subsection{问题一}
+  \subsubsection{问题一的模型建立}
+    \subfile{sections/q1_build}
+  \subsubsection{问题一的模型求解}
+    \subfile{sections/q1_solution}
+\subsection{问题二}
+  \subsubsection{模型建立}
+    \subfile{sections/q2_build}
+  \subsubsection{模型求解}
+    \subfile{sections/q2_solution}
+\subsection{问题三}
+  \subsubsection{模型建立}
+    \subfile{sections/q3_build}
+  \subsubsection{模型求解}
+    \subfile{sections/q3_solution}
+
+\section{模型的评价}
+  \subfile{sections/model_review}
+
+
+% 参考文献部分
+
+\newpage
+\nocite{wuli}
+\bibliography{../reference/reference}
+\newpage
+
+\begin{appendices} % 附录
+  \section{}
+  \lstinputlisting[language=python]{../src/test.py}
+
+
+
+\end{appendices}
+
+\end{document}
