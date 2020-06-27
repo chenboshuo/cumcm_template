@@ -88,7 +88,10 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   list-pair-separator = { ~\text{和}~ },
   range-phrase = { \sim }, % usage \SIrange{1}{2}{m}
 }
-
+% 算法环境
+\RequirePackage{algorithm}
+% \RequirePackage{clrscode}
+\RequirePackage{clrscode3e}
 
 %\renewcommand{\cftdot}{$\cdot$}
 %\renewcommand{\cftsecdotsep}{1.5}
