@@ -340,6 +340,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \crefformat{solution}{#2\mcm@cap@solution~#1#3}
 \crefrangeformat{solution}{\mcm@cap@solution~(#3#1#4)\;\~{}\;(#5#2#6)}
 \crefmultiformat{solution}{\mcm@cap@solution~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+
+\crefformat{algorithm}{#2算法#1#3}
+\crefrangeformat{algorithm}{算法(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{algorithm}{算法~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Document Markup
@@ -475,6 +480,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \renewcommand\tablename{\mcm@cap@tablename}
 \renewcommand\appendixname{\mcm@cap@appendixname}
 \renewcommand\abstractname{\mcm@cap@abstractname}
+\floatname{algorithm}{算法}
 
 % 中文标题格式设置
 % 目录深度
