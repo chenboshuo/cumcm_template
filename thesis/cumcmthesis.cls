@@ -93,6 +93,10 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \RequirePackage{clrscode}
 \RequirePackage{clrscode3e}
 
+% <- 的定义
+\DeclareMathSymbol{\leftarrow}{\mathrel}{symbols}{"20}
+\let\gets=\leftarrow
+
 %\renewcommand{\cftdot}{$\cdot$}
 %\renewcommand{\cftsecdotsep}{1.5}
 \renewcommand{\cftsecdotsep}{4.5}
