@@ -5,6 +5,9 @@
 % \documentclass{cumcmthesis}
 \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
 
+% \usepackage[disable]{todonotes}  % 关闭todo标签
+\usepackage{todonotes} % 打开todo标签
+
   \title{}
   \tihao{}
   \baominghao{}
@@ -19,6 +22,7 @@
 
 \usepackage{subfiles}  % Best loaded last in the preamble
 \begin{document}
+
 
 \maketitle
 
@@ -61,8 +65,10 @@
 \newpage
 \nocite{wuli}
 \bibliography{../reference/reference}
-\newpage
 
+\listoftodos
+
+\newpage
 \begin{appendices} % 附录
   \section{}
   \lstinputlisting[language=python]{../src/test.py}

@@ -9,7 +9,7 @@
 *.toc
 *.out
 *.xdv
-
+*.tdo
 
 # jupyter notebook
 .ipynb_checkpoints
