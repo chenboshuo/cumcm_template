@@ -138,11 +138,10 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{caption}
 % 定制列表环境
 \RequirePackage{enumitem}
-% 下划线
-\RequirePackage{ulem}
+% % 下划线
+% \RequirePackage{ulem}
 % 尺寸计算
 \RequirePackage{calc}
-
 \RequirePackage[titletoc,title]{appendix}
 
 %\RequirePackage[title,toc,titletoc]{appendix}
@@ -179,16 +178,16 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \setsansfont{Arimo} % Linux fc-match Arial 替代品
 
 % windowws 字体出现问题使用这一段设置
-\setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
-\newcommand*{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
-\newcommand*{\song}{\CJKfamily{song}}
+% \setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
+% \newcommand*{\kai}{\CJKfamily{kai}}
+% \setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
+% \newcommand*{\song}{\CJKfamily{song}}
 
 % linux 字体出现问题使用这一段设置
-% \setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
-% \newcommand*{\kai}{\CJKfamily{kai}}
-% \setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
-% \newcommand*{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
+\newcommand*{\kai}{\CJKfamily{kai}}
+\setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
+\newcommand*{\song}{\CJKfamily{song}}
 
 \renewcommand\normalsize{%
 	\@setfontsize\normalsize{12.05}{14.45}%
@@ -723,5 +722,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 设置参考文献格式
   %  需要安装   https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style
 \RequirePackage{gbt7714}
+
+\RequirePackage{todonotes} % 打开todo标签
+\setuptodonotes{inline, color=blue!30}
 
 \endinput

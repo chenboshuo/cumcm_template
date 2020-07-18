@@ -5,9 +5,9 @@
 % \documentclass{cumcmthesis}
 \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
 
-% \usepackage[disable]{todonotes}  % 关闭todo标签
-\usepackage{todonotes} % 打开todo标签
+% \setuptodonotes{disable} % 关闭todo标签
 
+% 基本信息
   \title{}
   \tihao{}
   \baominghao{}
@@ -30,8 +30,6 @@
 
 \section{问题重述}
   \subfile{sections/question_review}
-
-
 \section{问题的分析}
   \subfile{sections/analyse}
 \section{模型的假设}
@@ -66,6 +64,8 @@
 \nocite{wuli}
 \bibliography{../reference/reference}
 
+% TODO 提交最终版论文时别忘了关闭（第八行）
+\todototoc
 \listoftodos
 
 \newpage
