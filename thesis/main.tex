@@ -2,13 +2,10 @@
 % !BIB program = bibtex
 % !TEX program = xelatex
 
+% \PassOptionsToPackage{disable}{todonotes} % 关闭todo标签
+
 % \documentclass{cumcmthesis}
 \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
-
-% \usepackage{todonotes} % 打开todo标签
-\usepackage[disable]{todonotes} % 关闭todo标签
-\setuptodonotes{inline, color=blue!30}
-% \setuptodonotes{disable} 
 
 % 基本信息
   \title{}
@@ -67,7 +64,7 @@
 \nocite{wuli}
 \bibliography{../reference/reference}
 
-% TODO 提交最终版论文时别忘了关闭（第八行）
+% TODO 提交最终版论文时别忘了关闭（第5行）
 \listoftodos
 
 \newpage
