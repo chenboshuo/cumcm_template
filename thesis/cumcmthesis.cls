@@ -723,7 +723,5 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   %  需要安装   https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style
 \RequirePackage{gbt7714}
 
-\RequirePackage{todonotes} % 打开todo标签
-\setuptodonotes{inline, color=blue!30}
 
 \endinput
