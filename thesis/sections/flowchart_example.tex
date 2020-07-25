@@ -1,0 +1,52 @@
+% \documentclass{minipage}
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{figures/}{../figures/}}
+
+\begin{document}
+%
+\begin{tikzpicture}
+  % nodes
+  \node (start) [startstop] {开始};
+  \node (input) [io,below of=start] {
+    输入$E[N_i]$,$E[Y_i]$,$n_i$,$d_i(1)$,
+    $d_i(5)$,$d_i(9)$
+  };
+  \node (pi) [process,below of=input] {
+    $p_i = \frac{E[N_i]}{n_i}$
+  };
+  \node (lim) [process,below of=pi] {
+    调节$\lambda_i$范围
+  };
+  \node (mi) [process,below of=lim]{
+    $m_i = \frac{\lambda_i E[Y_i]}{n_i p_i}$
+  };
+  \node (fi) [process,below of=mi]{
+    求$F_i(d_i (k))$
+  };
+  \node (min) [process,below of=fi]{
+    记录$L(\lambda_i)$最小时的$\lambda$值
+  };
+  \node (if) [decision, below of=min]{
+    $\lambda_i \approx \lambda_1$ 
+    $\land$精度$<0.01$?
+  };
+  \node (no) [right of=if,xshift=4cm]{};
+  \node (yes) at  (if.south)[xshift=0.3cm,yshift=-0.3cm] {是};
+  \node (output) [io,below of=if,yshift=-1cm] {
+    输出 $p_i$,$\lambda_i$,$m_i$
+  };
+  \node (stop) [startstop,below of=output] {结束};
+
+  % arrows
+  \foreach \x [remember=\x as \lastx (initially start)] 
+    in {
+      input, pi,lim,mi,fi,min,if,output,stop%
+    }{
+      \draw[->] (\lastx) -- (\x);
+    };
+  \draw[->] (if.east) node[right,yshift=0.5cm] {否}-- (no.east) |- (lim.east);
+  
+
+\end{tikzpicture}
+%
+\end{document}

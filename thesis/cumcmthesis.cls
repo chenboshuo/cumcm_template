@@ -727,4 +727,43 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{todonotes} 
 \setuptodonotes{inline, color=blue!30}
 
+% flowchart
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{flowchartNodeSettiings} = [%
+  minimum width=3cm, 
+  minimum height=1cm,
+  text centered, 
+  draw=black,
+  node distance=2cm,
+  text width=0.4\textwidth,
+]
+\tikzstyle{startstop} = [%
+  rectangle, 
+  rounded corners,
+  flowchartNodeSettiings
+]
+\tikzstyle{io} = [%
+  trapezium, 
+  trapezium left angle=70, 
+  trapezium right angle=110,
+  flowchartNodeSettiings
+]
+\tikzstyle{process} = [
+  rectangle, 
+  flowchartNodeSettiings
+  ]
+\tikzstyle{decision} = [
+  diamond, 
+  aspect=2,
+  minimum width=5cm, 
+  minimum height=1cm, 
+  text centered, 
+  draw=black,
+  node distance=3cm,
+  text width=0.3\textwidth
+]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\usepackage{pgffor}
+\usetikzlibrary{svg.path}
+
 \endinput

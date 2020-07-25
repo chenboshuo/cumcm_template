@@ -34,6 +34,7 @@ git submodule update --recursive --remote
         ├── abstract.tex <------- 摘要
         ├── analyse.tex <-------- 问题分析
         ├── assumptions.tex <---- 模型假设
+        ├── flowchart_example.tex 一个tikz画的流图的例子
         ├── model_review.tex <--- 模型评价
         ├── notations.tex <------ 符号约定
         ├── q1_build.tex <------- 问题一模型建立
