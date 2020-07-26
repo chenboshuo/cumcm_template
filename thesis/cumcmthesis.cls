@@ -724,45 +724,52 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{gbt7714}
 
 % todo标签
-\RequirePackage{todonotes} 
+\RequirePackage{todonotes}
 \setuptodonotes{inline, color=blue!30}
 
 % flowchart
 \usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{calc}
+\RequirePackage{relsize}
+% reference https://tex.stackexchange.com/questions/107057/adjusting-font-size-with-tikz-picture
+% 参数可以修改文字大小
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
 \tikzstyle{flowchartNodeSettiings} = [%
-  minimum width=3cm, 
+  minimum width=3cm,
   minimum height=1cm,
-  text centered, 
+  text centered,
   draw=black,
-  node distance=2cm,
+  node distance=1.8cm,
   text width=0.4\textwidth,
+  % fontscale=1.2
 ]
 \tikzstyle{startstop} = [%
-  rectangle, 
+  rectangle,
   rounded corners,
   flowchartNodeSettiings
 ]
 \tikzstyle{io} = [%
-  trapezium, 
-  trapezium left angle=70, 
+  trapezium,
+  trapezium left angle=70,
   trapezium right angle=110,
   flowchartNodeSettiings
 ]
 \tikzstyle{process} = [
-  rectangle, 
+  rectangle,
   flowchartNodeSettiings
   ]
 \tikzstyle{decision} = [
-  diamond, 
+  diamond,
   aspect=2,
-  minimum width=5cm, 
-  minimum height=1cm, 
-  text centered, 
+  minimum width=5cm,
+  minimum height=1cm,
+  text centered,
   draw=black,
   node distance=3cm,
-  text width=0.3\textwidth
+  text width=0.3\textwidth,
+  % fontscale=1.2
 ]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{arrow} = [->,>=stealth]
 \usepackage{pgffor}
 \usetikzlibrary{svg.path}
 
