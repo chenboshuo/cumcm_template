@@ -2,15 +2,28 @@
 \graphicspath{{figures/}{../figures/}}
 
 \begin{document}
-\todo[color=green!30]{完成符号说明(sections/notations)}
+% \todo[inline,color=green!40]{完成符号说明
+%   (filename: sections/notations)}
+
 \begin{center}
-  \begin{tabular}{cc}
+  \begin{tabularx}{\textwidth}{ c X }
     \toprule[1.5pt]
-    \makebox[0.3\textwidth][c]{符号} & \makebox[0.4\textwidth][c]{意义} \\
-    \hline
-    $Q$                              & 单位时间燃油量                   \\
+      \vspace{2pt}
+      \makebox[0.3\textwidth][c]{符号} &
+      \makebox[0.4\textwidth][c]{意义}    \\
+      \hline
+    \endhead
+
     \bottomrule[1.5pt]
-  \end{tabular}
+    \vspace{2pt} % 加入一段垂直空白防止覆盖页码
+    \endfoot
+
+    % 表格正文
+    $N_i$ & 某一年第$i$月下雨天数 \\
+
+  \end{tabularx}
+
 \end{center}
+
 
 \end{document}

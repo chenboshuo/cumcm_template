@@ -55,6 +55,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{array}
 %% 长表格
 \RequirePackage{longtable}
+% 表格自动换行
+\RequirePackage{tabularx}
+\RequirePackage{ltablex}
 %% booktabs 提供了\toprule 等命令.
 \RequirePackage{booktabs}
 %% multirow 支持在表格中跨行
