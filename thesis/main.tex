@@ -4,21 +4,26 @@
 
 % \PassOptionsToPackage{disable}{todonotes} % 关闭todo标签
 
-% \documentclass{cumcmthesis}
+% \documentclass{cumcmthesis} % 带封面的版本
 \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
 
 % 基本信息
-  \title{}
+  \title{} % 文章标题写到这里
   \tihao{}
   \baominghao{}
   \schoolname{}
-  \membera{}
+  \membera{} % 成员
   \memberb{}
   \memberc{}
   \supervisor{}
   \yearinput{2020}
   \monthinput{9}
   \dayinput{13}
+
+% 载入路径
+\makeatletter
+\def\input@path{{sections/}{figures/}{../figures/}}
+\makeatother
 
 \usepackage{subfiles}  % Best loaded last in the preamble
 \begin{document}
@@ -57,7 +62,6 @@
 \section{模型的评价}
   \subfile{sections/model_review}
 
-
 % 参考文献部分
 
 \newpage
@@ -71,8 +75,6 @@
 \begin{appendices} % 附录
   \section{}
   \lstinputlisting[language=python]{../src/test.py}
-
-
 
 \end{appendices}
 

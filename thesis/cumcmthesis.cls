@@ -181,16 +181,16 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \setsansfont{Arimo} % Linux fc-match Arial 替代品
 
 % windowws 字体出现问题使用这一段设置
-% \setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
-% \newcommand*{\kai}{\CJKfamily{kai}}
-% \setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
-% \newcommand*{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
+\newcommand*{\kai}{\CJKfamily{kai}}
+\setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
+\newcommand*{\song}{\CJKfamily{song}}
 
 % linux 字体出现问题使用这一段设置
-\setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
-\newcommand*{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
-\newcommand*{\song}{\CJKfamily{song}}
+% \setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
+% \newcommand*{\kai}{\CJKfamily{kai}}
+% \setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
+% \newcommand*{\song}{\CJKfamily{song}}
 
 \renewcommand\normalsize{%
 	\@setfontsize\normalsize{12.05}{14.45}%

@@ -6,7 +6,22 @@
 /
 CUMCMThesis](https://github.com/latexstudio/CUMCMThesis)
 
-## 将模块中的模板类文件同步到最新
+## 使用建议
+### 建议使用`.gitignore` 用下面命令清理中间文件
+```bash
+git clean -fXd
+```
+
+### 使用snippets
+尽量使用snippets减少固定操作
+-   vscode
+    -   [我的snippets](https://github.com/chenboshuo/fiddle/blob/master/my_config/latex.json)
+    
+-   atom
+    -   [我的snippets](https://github.com/chenboshuo/fiddle/blob/master/my_config/snippets.cson)
+
+### 使用子模块和软连接
+这样可以用以下命令将模块中的模板类文件同步到最新
 ```bash
 git submodule add git@github.com:chenboshuo/cumcm_template.git
 ln -s cumcm_template/thesis/cumcmthesis.cls
@@ -49,3 +64,22 @@ git submodule update --recursive --remote
 -   [表格转化工具](https://www.tablesgenerator.com/)
 -   [在线公式编辑转换](https://www.latexlive.com/##)
 -   [overleaf latex document](https://www.overleaf.com/learn)
+
+## 已知的问题
+
+### 字体
+win 和 linux字体名不一样
+在`cumcmthesis.cls`找到如下内容（约183行）
+```latex
+% windowws 字体出现问题使用这一段设置
+\setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
+\newcommand*{\kai}{\CJKfamily{kai}}
+\setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
+\newcommand*{\song}{\CJKfamily{song}}
+
+% linux 字体出现问题使用这一段设置
+% \setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
+% \newcommand*{\kai}{\CJKfamily{kai}}
+% \setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
+% \newcommand*{\song}{\CJKfamily{song}}
+```
