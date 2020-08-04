@@ -1,6 +1,12 @@
 # cumcm
 我修改的数学建模国赛模板（分文件， 导入有用的库）
 
+[![HitCount](http://hits.dwyl.io/chenboshuo/githubcom/chenboshuo/cumcm_template.svg)](http://hits.dwyl.io/chenboshuo/githubcom/chenboshuo/cumcm_template)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/chenboshuo/cumcm_template.svg)
+
+[![wakatime](https://wakatime.com/badge/github/chenboshuo/cumcm_template.svg)](https://wakatime.com/badge/github/chenboshuo/cumcm_template)
+
 ## 参考
 [latexstudio
 /
@@ -16,7 +22,7 @@ git clean -fXd
 尽量使用snippets减少固定操作
 -   vscode
     -   [我的snippets](https://github.com/chenboshuo/fiddle/blob/master/my_config/latex.json)
-    
+
 -   atom
     -   [我的snippets](https://github.com/chenboshuo/fiddle/blob/master/my_config/snippets.cson)
 
