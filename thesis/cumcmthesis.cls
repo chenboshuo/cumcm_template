@@ -732,6 +732,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{todonotes}
 \setuptodonotes{inline, color=blue!30}
 
+% pdf 插入
+\RequirePackage{pdfpages}
+
 % flowchart
 \usetikzlibrary{shapes.geometric, arrows}
 \usetikzlibrary{calc}
