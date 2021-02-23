@@ -178,18 +178,23 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %\setmonofont{Courier New}
 \setsansfont{Arial}
 % \setsansfont{Arimo} % Linux fc-match Arial 替代品
+\RequirePackage{ifplatform}
 
-% windowws 字体出现问题使用这一段设置
-\setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
-\newcommand*{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
-\newcommand*{\song}{\CJKfamily{song}}
+\ifwindows
+  % windowws 字体设置
+  \setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
+  \newcommand*{\kai}{\CJKfamily{kai}}
+  \setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
+  \newcommand*{\song}{\CJKfamily{song}}
+\else
+  % linux 字体设置
+  \setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
+  \newcommand*{\kai}{\CJKfamily{kai}}
+  \setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
+  \newcommand*{\song}{\CJKfamily{song}}
+\fi
 
-% linux 字体出现问题使用这一段设置
-% \setCJKfamilyfont{KaiTi}[AutoFakeBold]{simkai.ttf}
-% \newcommand*{\kai}{\CJKfamily{kai}}
-% \setCJKfamilyfont{SimSun}[AutoFakeBold]{SimSun}
-% \newcommand*{\song}{\CJKfamily{song}}
+
 
 
 \renewcommand\normalsize{%
