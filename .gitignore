@@ -11,11 +11,18 @@
 *.xdv
 *.tdo
 
-# jupyter notebook
-.ipynb_checkpoints
+# python and jupyter notebook
+**/.ipynb_checkpoints
+**/__pycache__
 
 # vocode
 .vscode
 
 # sections pdf
 **/sections/*.pdf
+
+# build file
+**/build
+
+# tree
+thesis/sections/tree.txt

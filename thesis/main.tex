@@ -28,7 +28,8 @@
 \usepackage{subfiles}  % Best loaded last in the preamble
 \begin{document}
 
-
+% TODO 提交最终版论文时别忘了关闭（第5行）
+\listoftodos
 \maketitle
 
 \subfile{sections/abstract}
@@ -65,15 +66,17 @@
 % 参考文献部分
 
 \newpage
-\nocite{wuli}
+\nocite{*}
 \bibliography{../reference/reference}
 
-% TODO 提交最终版论文时别忘了关闭（第5行）
-\listoftodos
 
 \newpage
 \begin{appendices} % 附录
-  \section{}
+  \section{支撑材料目录与代码环境依赖}
+    本文支撑材料目录结构如下
+    \lstinputlisting{sections/tree.txt}
+
+  \section{导入其他代码的测试}
   \lstinputlisting[language=python]{../src/test.py}
 
 \end{appendices}
