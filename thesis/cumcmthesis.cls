@@ -787,6 +787,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \usetikzlibrary{svg.path}
 
 % 文件树（|- 等tree命令生成符号）
-\setmonofont{DejaVu Sans Mono}
+\ifwindows
+\else
+  \setmonofont{DejaVu Sans Mono}
+\fi
 
 \endinput
