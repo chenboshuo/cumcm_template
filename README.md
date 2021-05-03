@@ -145,6 +145,7 @@ make help      show this message.
         ├── q3_build.tex
         ├── q3_solution.tex
         ├── question_review.tex <- 问题重述
+        ├── symbols_def.tex <- 用LaTex 定义的符号，也可以不使用该文件直接使用表格
         └── tree.txt <------------ 支撑材料目录结构，../src的目录树，两个脚本都可以自动生成
 ```
 

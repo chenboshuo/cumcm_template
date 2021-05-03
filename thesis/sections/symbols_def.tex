@@ -1,0 +1,10 @@
+% 符号定义文件，命令所有文件共享
+% 并在 notations 打印
+
+\glsxtrnewsymbol[
+	description={%
+		an example symbol % 对符号的描述
+	},
+	unit={\si{m^2}} % 单位，不显示可以不写
+]{e}{\ensuremath{\mathcal{E}}}
+% 第一个参数e是后期可以直接\gls{e}代表之后的符号

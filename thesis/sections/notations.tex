@@ -5,25 +5,37 @@
 % \todo[inline,color=green!40]{完成符号说明
 %   (filename: sections/notations)}
 
-\begin{center}
-  \begin{tabularx}{\textwidth}{ c X }
-    \toprule[1.5pt]
-      \vspace{2pt}
-      \makebox[0.3\textwidth][c]{符号} &
-      \makebox[0.4\textwidth][c]{意义}    \\
-      \hline
-    \endhead
 
-    \bottomrule[1.5pt]
-    \vspace{2pt} % 加入一段垂直空白防止覆盖页码
-    \endfoot
+\todo[color=green!30]{引用符号可以直接\gls{e},点击会跳转到符号表,定义在section/notations.tex 中}
 
-    % 表格正文
-    $N_i$ & 某一年第$i$月下雨天数 \\
+% 符号表
+\printunsrtglossary[type=symbols,style=symbunitlong] % symbols
 
-  \end{tabularx}
+% 带单位的符号表
+% \printunsrtglossary[type=symbols,style=symblong] % symbols without units
 
-\end{center}
+
+
+% % 也可以直接使用表格
+% \begin{center}
+%   \begin{tabularx}{\textwidth}{ c X }
+%     \toprule[1.5pt]
+%       \vspace{2pt}
+%       \makebox[0.3\textwidth][c]{符号} &
+%       \makebox[0.4\textwidth][c]{意义}    \\
+%       \hline
+%     \endhead
+%
+%     \bottomrule[1.5pt]
+%     \vspace{2pt} % 加入一段垂直空白防止覆盖页码
+%     \endfoot
+%
+%     % 表格正文
+%     $N_i$ & 某一年第$i$月下雨天数 \\
+%
+%   \end{tabularx}
+%
+% \end{center}
 
 
 \end{document}

@@ -792,4 +792,62 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   \setmonofont{DejaVu Sans Mono}
 \fi
 
+% 符号表
+\RequirePackage[symbols,nogroupskip,sort=none]{glossaries-extra}
+
+% new keys must be defined before use
+\glsaddstoragekey{unit}{}{\glossentryunit}
+\glsnoexpandfields
+
+\newglossarystyle{symbunitlong}{%
+  \setglossarystyle{long3col}% base this style on the list style
+  \renewenvironment{theglossary}{% Change the table type --> 3 columns
+    \begin{longtable}{lp{\glsdescwidth}>{\centering\arraybackslash}p{2cm}}%
+  }{
+    \end{longtable}
+  }%
+  %
+  \renewcommand*{\glossaryheader}{%  Change the table header
+    \toprule[1.5pt]
+    \bfseries Symbol & \bfseries Description & \bfseries Unit\\\hline
+    \endhead
+    \bottomrule[1.5pt]
+    \vspace{2pt}
+    \endfoot
+  }%
+  \renewcommand*{\glossentry}[2]{%  Change the displayed items
+    \glstarget{##1}{\glossentryname{##1}} %
+    & \glossentrydesc{##1}% Description
+    & \glossentryunit{##1}  \tabularnewline
+  }%
+}
+
+\newglossarystyle{symblong}{%
+  \setglossarystyle{long}% base this style on the list style
+  \renewenvironment{theglossary}{% Change the table type --> 3 columns
+    \begin{longtable}{lp{0.8\textwidth}}%
+    % \begin{longtable}{cc}%
+
+    % \begin{longtable}
+  }{
+    \end{longtable}
+  }%
+  %
+  \renewcommand*{\glossaryheader}{%  Change the table header
+    \toprule[1.5pt]
+    \bfseries Symbol & \bfseries Description \\\hline
+    \endhead
+    \bottomrule[1.5pt]
+    \vspace{2pt}
+    \endfoot
+  }%
+  \renewcommand*{\glossentry}[2]{%  Change the displayed items
+    \glstarget{##1}{\glossentryname{##1}} %
+    & \glossentrydesc{##1}% Description
+    \tabularnewline
+  }%
+}
+\renewcommand{\glossarysection}[2][]{}
+
+
 \endinput
