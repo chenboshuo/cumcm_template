@@ -19,6 +19,8 @@ function add_extra {
   Out-File $fileName -Append
 }
 
+# encoding
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
 
 # make build directory
 mkdir build
