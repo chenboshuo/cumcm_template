@@ -3,6 +3,7 @@
               [2017/09/16 v2.6 Standard LaTeX Template for CUMCM]
 %% Inital Code
 \newif\if@mcm@bwprint\@mcm@bwprintfalse
+\newif\if@mcm@ebook\@mcm@ebookfalse
 \newif\if@mcm@preface\@mcm@prefacetrue
 % tokens definition
 %%%% 承诺书
@@ -23,6 +24,7 @@
 \DeclareOption{colorprint}{\@mcm@bwprintfalse}
 \DeclareOption{bwprint}{\@mcm@bwprinttrue}
 \DeclareOption{withoutpreface}{\@mcm@prefacefalse}
+\DeclareOption{ebook}{\@mcm@ebooktrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 %% Executing of Options
 \ExecuteOptions{colorprint}
@@ -38,8 +40,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \fi
 % 支持中文的 ctex 宏包
 \RequirePackage{ctex}
-% 页面布局
-\RequirePackage{geometry}
 % 数学宏包
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -159,7 +159,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{cleveref}
 %% Document Layout
 % 页面布局
-\geometry{top=25mm,bottom=25mm,left=25mm,right=25mm}
+\if@mcm@ebook
+  \RequirePackage[papersize={108mm,144mm},
+      margin=2mm,
+      bottom=3mm
+    ]{geometry}
+\else
+  \RequirePackage{geometry}
+  \geometry{top=25mm,bottom=25mm,left=25mm,right=25mm}
+\fi
 \renewcommand*{\baselinestretch}{1.38}
 % 修改tabular 环境, 设置表格中的行间距为正文行间距.
 \let\mcm@oldtabular\tabular

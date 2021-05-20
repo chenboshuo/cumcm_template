@@ -48,6 +48,7 @@ git submodule update --recursive --remote
 ## 使用脚本
 
 ### Linux
+### 构建TODO版本
 进入thesis 文件夹，运行
 ```bash
 make todo
@@ -60,7 +61,7 @@ make todo
 % \PassOptionsToPackage{disable}{todonotes} % 关闭todo标签
 ```
 
-
+### 构建打印版本
 ```bash
 make print
 ```
@@ -69,6 +70,8 @@ make print
 有前面的保证书页
 **正式提交电子文件不要提交这个（因为含有个人信息）**
 
+
+### 构建发布版本
 ```bash
 make release
 ```
@@ -84,6 +87,20 @@ make release
 \PassOptionsToPackage{disable}{todonotes} % 关闭todo标签
 ```
 
+### 构建电子书版本
+本模板提供电子书版本方便讨论交流时查看，
+可能与其他版本有出入，
+请勿正式提交
+```bash
+make ebook
+```
+或者将`main.tex`第`7`行注释，第`8`行加上ebook参数
+```latex
+% \documentclass{cumcmthesis} % 带封面的版本
+\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis} %去掉封面与编号页
+```
+
+### 构建全部版本
 ```bash
 make
 ```
@@ -91,7 +108,7 @@ make
 ```bash
 make all
 ```
-可以同时得到以上三个版本
+可以同时得到以上四个版本
 
 同时还有其他脚本可以用
 ```bash
@@ -103,6 +120,7 @@ make all       regenerate all results.
 make todo      make build/todo.pdf
 make release   make release version(without todo,cover) to build
 make print     make print version(without todo) to build
+make ebook     make the ebook version(with todo)
 make *.pdf     generate the pdf files
 make tree      update the file tree
 make clean     clean the temp files

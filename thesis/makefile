@@ -2,7 +2,7 @@
 .PHONY : all clean help todo release
 file_name=release
 ## make all : regenerate all results.
-all: todo release print
+all: todo release print ebook
 
 ## make todo: make build/todo.pdf
 todo: build/todo.pdf
@@ -16,11 +16,17 @@ release: build/$(file_name).pdf
 print: build/print.pdf
 	rm -f print.tex
 
+## make ebook : make the ebook version(with todo)
+ebook: build/ebook.pdf
+	rm -f ebook.tex
 
 todo.tex : build tree
 	echo "\documentclass[withoutpreface,bwprint]{cumcmthesis}" > todo.tex
 	awk 'FNR>10' main.tex >> todo.tex
 
+ebook.tex : build tree
+	echo "\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis}" > ebook.tex
+	awk 'FNR>10' main.tex >> ebook.tex
 
 print.tex: build tree
 	echo "\PassOptionsToPackage{disable}{todonotes}" > print.tex

@@ -37,6 +37,13 @@ add_extra todo.tex
 build todo
 rm todo.tex
 
+# make ebook
+echo "\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis} %去掉封面与编号页" |
+  Out-File ebook.tex
+add_extra ebook.tex
+build ebook
+rm ebook.tex
+
 # make print version
 echo "\PassOptionsToPackage{disable}{todonotes} \documentclass{cumcmthesis}" |
   Out-File print.tex
