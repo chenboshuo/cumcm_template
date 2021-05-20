@@ -849,5 +849,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }
 \renewcommand{\glossarysection}[2][]{}
 
+% 。转换为 .
+\RequirePackage{newunicodechar}
+\newunicodechar{。}{. }
 
 \endinput
