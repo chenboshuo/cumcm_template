@@ -833,7 +833,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newglossarystyle{symblong}{%
   \setglossarystyle{long}% base this style on the list style
   \renewenvironment{theglossary}{% Change the table type --> 3 columns
-    \begin{longtable}{lp{0.8\textwidth}}%
+    \begin{longtable}{lp{0.9\textwidth}}%
     % \begin{longtable}{cc}%
 
     % \begin{longtable}
@@ -843,7 +843,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   %
   \renewcommand*{\glossaryheader}{%  Change the table header
     \toprule[1.5pt]
-    \bfseries Symbol & \bfseries Description \\\hline
+    \bfseries 符号 & \bfseries 说明 \\
+    \hline
     \endhead
     \bottomrule[1.5pt]
     \vspace{2pt}
@@ -859,6 +860,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % 。转换为 .
 \RequirePackage{newunicodechar}
-\newunicodechar{。}{. }
+\newunicodechar{。}{.}
+\newunicodechar{，}{,} %
+
 
 \endinput
