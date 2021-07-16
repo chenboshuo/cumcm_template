@@ -817,7 +817,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   %
   \renewcommand*{\glossaryheader}{%  Change the table header
     \toprule[1.5pt]
-    \bfseries Symbol & \bfseries Description & \bfseries Unit\\\hline
+    \bfseries 符号 & \bfseries 说明 & \bfseries 单位\\\hline
     \endhead
     \bottomrule[1.5pt]
     \vspace{2pt}
