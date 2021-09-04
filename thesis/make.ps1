@@ -31,14 +31,14 @@ tree |Out-File ../thesis/sections/tree.txt
 cd ../thesis
 
 # make todo
-echo "\documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页" |
+echo "\documentclass[withoutpreface,bwprint,draft]{cumcmthesis} %去掉封面与编号页" |
   Out-File todo.tex
 add_extra todo.tex
 build todo
 rm todo.tex
 
 # make ebook
-echo "\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis} %去掉封面与编号页" |
+echo "\documentclass[withoutpreface,bwprint,ebook,draft]{cumcmthesis} %去掉封面与编号页" |
   Out-File ebook.tex
 add_extra ebook.tex
 build ebook

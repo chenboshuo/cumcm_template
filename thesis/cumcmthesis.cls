@@ -69,7 +69,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 保护脆落命令
 \RequirePackage{cprotect}
 % 设置代码环境
-\RequirePackage{listings}
+\RequirePackage[final]{listings}
 \RequirePackage{xcolor}
 % 插入链接
 \RequirePackage{url}
@@ -132,6 +132,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   breaklines=true,
   breakatwhitespace=true,
   tabsize=3,
+  print
 }
 % 首行缩进
 \RequirePackage{indentfirst}
@@ -168,6 +169,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   \RequirePackage{geometry}
   \geometry{top=25mm,bottom=25mm,left=25mm,right=25mm}
 \fi
+
 \renewcommand*{\baselinestretch}{1.38}
 % 修改tabular 环境, 设置表格中的行间距为正文行间距.
 \let\mcm@oldtabular\tabular
@@ -567,7 +569,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	\par
 	\vskip1ex
 	{\noindent\zihao{-4}\heiti\mcm@cap@keywordsname：}~{\mcm@tokens@keywords}
-	}
+}
 % 定义附录
 
 % \renewcommand{\setthesection}{\appendixname\Alph{section}}
@@ -742,7 +744,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{gbt7714}
 
 % todo标签
-\RequirePackage{todonotes}
+\RequirePackage[obeyDraft]{todonotes}
 \setuptodonotes{inline, color=blue!30}
 
 % pdf 插入

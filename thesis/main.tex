@@ -2,9 +2,9 @@
 % !BIB program = bibtex
 % !TEX program = xelatex
 
-% \PassOptionsToPackage{disable}{todonotes} % 关闭todo标签
-
-\documentclass{cumcmthesis} % 带封面的版本
+\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis} % 普通草稿
+% \documentclass[draft,ebook]{cumcmthesis} % 电子书草稿
+% \documentclass{cumcmthesis} % 带封面的版本
 % \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页
 
 % 基本信息
@@ -31,7 +31,7 @@
 \usepackage{subfiles}  % Best loaded last in the preamble
 \begin{document}
 
-% TODO 提交最终版论文时别忘了关闭（第5行）
+% TODO 提交最终版论文时别忘了选择 7,8行版本
 \listoftodos
 \maketitle
 
