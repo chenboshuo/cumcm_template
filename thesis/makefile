@@ -1,5 +1,5 @@
-.INTERMEDIATE : tree
-.PHONY : all clean help todo release
+# .INTERMEDIATE : tree
+.PHONY : all clean help todo release sections/tree.txt
 file_name=release
 ## make all : regenerate all results.
 all: todo release print ebook
@@ -21,11 +21,11 @@ ebook: build/ebook.pdf
 	rm -f ebook.tex
 
 todo.tex : build tree
-	echo "\documentclass[withoutpreface,bwprint]{cumcmthesis}" > todo.tex
+	echo "\documentclass[withoutpreface,bwprint,draft]{cumcmthesis}" > todo.tex
 	awk 'FNR>10' main.tex >> todo.tex
 
 ebook.tex : build tree
-	echo "\documentclass[withoutpreface,bwprint,ebook]{cumcmthesis}" > ebook.tex
+	echo "\documentclass[withoutpreface,bwprint,ebook,draft]{cumcmthesis}" > ebook.tex
 	awk 'FNR>10' main.tex >> ebook.tex
 
 print.tex: build tree
