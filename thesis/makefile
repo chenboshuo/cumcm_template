@@ -1,6 +1,11 @@
 # .INTERMEDIATE : tree
 .PHONY : all clean help todo release sections/tree.txt
+RED=\033[0;31m
+NC=\033[0m # No Color
 file_name=release
+time_out=3m
+timeout_prompt="\n\n ${RED} TIME OUT:${NC} process was killed because of timeout\n"
+latex_command="xelatex -halt-on-error"
 ## make all : regenerate all results.
 all: todo release print ebook
 
@@ -40,10 +45,14 @@ $(file_name).tex : build tree
 
 ## make *.pdf : generate the pdf files
 build/%.pdf: %.tex
-	xelatex -output-directory="./build" $<
-	bibtex ./build/$(basename $<)
-	xelatex -output-directory="./build" $<
-	xelatex -output-directory="./build" $<
+	timeout $(time_out) xelatex -output-directory="./build" $< || \
+		(echo -e $(timeout_prompt) && exit -1)
+	timeout $(time_out) bibtex ./build/$(basename $<) || \
+		(echo -e $(timeout_prompt) && exit -1)
+	timeout $(time_out) xelatex -output-directory="./build" $< || \
+		(echo -e $(timeout_prompt) && exit -1)
+	timeout $(time_out) xelatex -output-directory="./build" $< || \
+		(echo -e $(timeout_prompt) && exit -1)
 
 ## make tree: update the file tree
 tree: sections/tree.txt
