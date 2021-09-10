@@ -49,7 +49,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 设置颜色
 \RequirePackage{xcolor}
 % 插入图片
-\RequirePackage{graphicx}
+\RequirePackage[final]{graphicx}
 \RequirePackage{float}
 % 表格
 \RequirePackage{array}
@@ -81,6 +81,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{subcaption}
 \RequirePackage[titles]{tocloft}
 
+% 目录
+\RequirePackage[nottoc]{tocbibind}
 
 % 物理单位
 \RequirePackage{siunitx}
@@ -155,7 +157,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \addcontentsline{toc}{section}{\refname}
     }
 % 超链接 hyperref 的设置
-\RequirePackage[final]{hyperref}
+\RequirePackage{hyperref}
 % 智能自动化交叉引用
 \RequirePackage{cleveref}
 %% Document Layout
@@ -748,7 +750,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \setuptodonotes{inline, color=blue!30}
 
 % pdf 插入
-\RequirePackage{pdfpages}
+\RequirePackage[final]{pdfpages}
 
 % flowchart
 \usetikzlibrary{shapes.geometric, arrows}
